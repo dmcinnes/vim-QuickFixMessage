@@ -19,14 +19,14 @@ function! s:AutofyQuickFix()
   if l:error
     hi RedBar term=reverse ctermfg=white ctermbg=red guifg=white guibg=red
     echohl RedBar
-    call CenterEcho("FAIL!")
+    call s:CenterEcho("FAIL!")
     echohl
     cope
     au BufLeave <buffer> cclose
   else
     hi GreenBar term=reverse ctermfg=white ctermbg=green guifg=white guibg=green
     echohl GreenBar
-    call CenterEcho("SUCCESS!")
+    call s:CenterEcho("SUCCESS!")
     echohl
   endif
 endfunction
